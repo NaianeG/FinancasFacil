@@ -22,7 +22,8 @@
             </Grid.ColumnDefinitions>
 
             <Label Grid.Row="0" Grid.Column="1"  x:Name="Dados"></Label>
-            <Label Grid.Row="0" Grid.Column="2" Text="João da Silva"></Label>
+            <Label Grid.Row="0" Grid.Column="2"></Label>
+            <Label Text="Seus valores são:"></Label>
 
         </Grid>
     </VerticalStackLayout>

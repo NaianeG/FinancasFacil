@@ -1,6 +1,7 @@
 ﻿using Dominio.Entidades;
 using Integracao;
 using Newtonsoft.Json;
+using Microsoft.Maui.Controls;
 namespace FinancasFacil
 {
     public partial class MainPage : ContentPage
@@ -19,6 +20,17 @@ namespace FinancasFacil
             await Navigation.PushAsync(shareDetails);
             SemanticScreenReader.Announce(BuscarInformacoes.Text);
         }
-    }
 
+        private void CampoSimbolo_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(campoSimbolo.Text))
+            {
+                BuscarInformacoes.IsEnabled = false;
+            }
+            else
+            {
+                BuscarInformacoes.IsEnabled = true;
+            }
+        }
+    }
 }
